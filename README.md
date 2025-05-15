@@ -24,7 +24,8 @@ Challenge phases pull their data from archives to test submissions on.
 
 Your challenge has the following archives:
 
-* https://grand-challenge.org/archives/rare25-closed-testing-phase-dataset/
+* https://grand-challenge.org/archives/rare25-open-development-phase-dataset/  
+* https://grand-challenge.org/archives/rare25-closed-testing-phase-dataset/  
 
 
 
