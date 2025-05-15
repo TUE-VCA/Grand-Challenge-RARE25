@@ -1,0 +1,125 @@
+[
+    {
+        "pk": "516bd032-e2aa-4f2d-8cf2-fe17c03654db",
+        "inputs": [
+            {
+                "file": null,
+                "image": {
+                    "name": "the_original_filename_of_the_file_that_was_uploaded.suffix"
+                },
+                "value": null,
+                "interface": {
+                    "slug": "stacked-barretts-esophagus-endoscopy-images",
+                    "kind": "Image",
+                    "super_kind": "Image",
+                    "relative_path": "images/stacked-barretts-esophagus-endoscopy",
+                    "example_value": null
+                }
+            }
+        ],
+        "outputs": [
+            {
+                "file": "https://grand-challenge.org/media/some-link/stacked-neoplastic-lesion-likelihoods.json",
+                "image": null,
+                "value": null,
+                "interface": {
+                    "slug": "stacked-neoplastic-lesion-likelihoods",
+                    "kind": "Anything",
+                    "super_kind": "File",
+                    "relative_path": "stacked-neoplastic-lesion-likelihoods.json",
+                    "example_value": [
+                        0.1,
+                        0.5,
+                        0.3,
+                        1.0
+                    ]
+                }
+            }
+        ],
+        "status": "Succeeded",
+        "started_at": "2024-11-29T10:31:25.691799Z",
+        "completed_at": "2024-11-29T10:31:50.691799Z"
+    },
+    {
+        "pk": "77128fd1-2104-4a34-9257-e75a31443c33",
+        "inputs": [
+            {
+                "file": null,
+                "image": {
+                    "name": "the_original_filename_of_the_file_that_was_uploaded.suffix"
+                },
+                "value": null,
+                "interface": {
+                    "slug": "stacked-barretts-esophagus-endoscopy-images",
+                    "kind": "Image",
+                    "super_kind": "Image",
+                    "relative_path": "images/stacked-barretts-esophagus-endoscopy",
+                    "example_value": null
+                }
+            }
+        ],
+        "outputs": [
+            {
+                "file": "https://grand-challenge.org/media/some-link/stacked-neoplastic-lesion-likelihoods.json",
+                "image": null,
+                "value": null,
+                "interface": {
+                    "slug": "stacked-neoplastic-lesion-likelihoods",
+                    "kind": "Anything",
+                    "super_kind": "File",
+                    "relative_path": "stacked-neoplastic-lesion-likelihoods.json",
+                    "example_value": [
+                        0.1,
+                        0.5,
+                        0.3,
+                        1.0
+                    ]
+                }
+            }
+        ],
+        "status": "Succeeded",
+        "started_at": "2024-11-29T10:31:25.691799Z",
+        "completed_at": "2024-11-29T10:31:50.691799Z"
+    },
+    {
+        "pk": "6a441cdc-d939-466b-a990-e85ca2778071",
+        "inputs": [
+            {
+                "file": null,
+                "image": {
+                    "name": "the_original_filename_of_the_file_that_was_uploaded.suffix"
+                },
+                "value": null,
+                "interface": {
+                    "slug": "stacked-barretts-esophagus-endoscopy-images",
+                    "kind": "Image",
+                    "super_kind": "Image",
+                    "relative_path": "images/stacked-barretts-esophagus-endoscopy",
+                    "example_value": null
+                }
+            }
+        ],
+        "outputs": [
+            {
+                "file": "https://grand-challenge.org/media/some-link/stacked-neoplastic-lesion-likelihoods.json",
+                "image": null,
+                "value": null,
+                "interface": {
+                    "slug": "stacked-neoplastic-lesion-likelihoods",
+                    "kind": "Anything",
+                    "super_kind": "File",
+                    "relative_path": "stacked-neoplastic-lesion-likelihoods.json",
+                    "example_value": [
+                        0.1,
+                        0.5,
+                        0.3,
+                        1.0
+                    ]
+                }
+            }
+        ],
+        "status": "Succeeded",
+        "started_at": "2024-11-29T10:31:25.691799Z",
+        "completed_at": "2024-11-29T10:31:50.691799Z"
+    }
+]
