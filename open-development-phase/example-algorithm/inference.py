@@ -48,7 +48,7 @@ def run():
 def interface_0_handler():
     # Read the input
     input_stacked_barretts_esophagus_endoscopy_images = load_image_file_as_array(
-        location=INPUT_PATH / "images/stacked-barretts-esophagus-endoscopy",
+        location=INPUT_PATH / r"E:\RARE2025_FINAL_DATA\test-val-tiff",
     )
 
     # Process the inputs: any way you'd like
