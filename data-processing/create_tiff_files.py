@@ -7,7 +7,7 @@ from tqdm import tqdm
 output_root = r'E:\RARE2025_FINAL_DATA\test-val-split'  # Same as before
 tiff_output_dir = r'E:\RARE2025_FINAL_DATA\test-val-tiff'  # New folder to store TIFF batches
 os.makedirs(tiff_output_dir, exist_ok=True)
-batch_size = 192
+batch_size = 384
 resize_dim = (512, 512)
 
 def extract_patient_id(filename):
@@ -54,7 +54,12 @@ def create_batches(split):
             batch_end = batch_start + len(batch) - 1
             batch_filename = f"batch_{batch_start}_{batch_end}.tiff"
             batch_path = os.path.join(tiff_output_dir, f"{split}_{batch_filename}")
-            batch[0].save(batch_path, save_all=True, append_images=batch[1:], compression='tiff_deflate')
+            dpi = (300, 300)  # Example: 300 DPI = 0.085 mm/pixel, adjust as needed
+            tiff_tags = {
+                'dpi': dpi,  # This sets XResolution and YResolution
+            }
+
+            batch[0].save(batch_path, save_all=True, append_images=batch[1:], dpi=dpi)
 
             batch_key = f"{split}_{batch_filename}"
             if batch_key not in metadata:
@@ -78,7 +83,7 @@ def create_batches(split):
         batch_end = batch_start + len(batch) - 1
         batch_filename = f"batch_{batch_start}_{batch_end}.tiff"
         batch_path = os.path.join(tiff_output_dir, f"{split}_{batch_filename}")
-        batch[0].save(batch_path, save_all=True, append_images=batch[1:], compression='tiff_deflate')
+        batch[0].save(batch_path, save_all=True, append_images=batch[1:], dpi=dpi)
 
         batch_key = f"{split}_{batch_filename}"
         if batch_key not in metadata:

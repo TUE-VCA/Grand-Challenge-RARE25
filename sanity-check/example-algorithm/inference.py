@@ -25,7 +25,7 @@ from pathlib import Path
 import json
 from glob import glob
 import SimpleITK
-import numpy as np
+import numpy
 
 INPUT_PATH = Path("/input")
 OUTPUT_PATH = Path("/output")
@@ -50,26 +50,26 @@ def interface_0_handler():
     input_stacked_barretts_esophagus_endoscopy_images = load_image_file_as_array(
         location=INPUT_PATH / "images/stacked-barretts-esophagus-endoscopy",
     )
+
     # Process the inputs: any way you'd like
     _show_torch_cuda_info()
 
-    # Optional: part of the Docker-container image: resources/
-    # resource_dir = Path("/opt/app/resources")
-    # with open(resource_dir / "some_resource.txt", "r") as f:
-    #     print(f.read())
+    # Some additional resources might be required, include these in one of two ways.
 
-    """ Run your model here """
-    # for demonstration we will use the timm classification model from the model directory
-    from model.timm_model import TimmClassificationModel
-    print('test')
-    model = TimmClassificationModel(
-        model_name="resnet50",
-        num_classes=1,
-        weights=RESOURCE_PATH / "resnet50.pth",
-    )
+    # Option 1: part of the Docker-container image: resources/
+    resource_dir = Path("/opt/app/resources")
+    with open(resource_dir / "some_resource.txt", "r") as f:
+        print(f.read())
 
-    output_stacked_neoplastic_lesion_likelihoods = model.predict(input_stacked_barretts_esophagus_endoscopy_images)
+    # Option 2: upload them as a separate tarball to Grand Challenge (go to your Algorithm > Models). The resources in the tarball will be extracted to `model_dir` at runtime.
+    model_dir = Path("/opt/ml/model")
+    with open(
+        model_dir / "a_tarball_subdirectory" / "some_tarball_resource.txt", "r"
+    ) as f:
+        print(f.read())
 
+    # For now, let us make bogus predictions
+    output_stacked_neoplastic_lesion_likelihoods = [0.1, 0.5, 0.3, 1.0]
 
     # Save your output
     write_json_file(
@@ -101,7 +101,7 @@ def write_json_file(*, location, content):
     with open(location, "w") as f:
         f.write(json.dumps(content, indent=4))
 
-0
+
 def load_image_file_as_array(*, location):
     # Use SimpleITK to read a file
     input_files = (

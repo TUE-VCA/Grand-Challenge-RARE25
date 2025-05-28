@@ -207,4 +207,3 @@ def tree(dir_path: Path, prefix: str = ""):
             extension = branch if pointer == tee else space
             # i.e. space because last, └── , above so no more |
             yield from tree(path, prefix=prefix + extension)
-

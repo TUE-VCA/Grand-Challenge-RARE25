@@ -77,7 +77,7 @@ run_docker_forward_pass() {
         --volume "${INPUT_DIR}/${interface_dir}":/input:ro \
         --volume "${OUTPUT_DIR}/${interface_dir}":/output \
         --volume "$DOCKER_NOOP_VOLUME":/tmp \
-        --volume "${SCRIPT_DIR}/model":/opt/ml/model:ro \
+        --volume "${SCRIPT_DIR}/model":/opt/ml/models:ro \
         "$DOCKER_IMAGE_TAG"
 
   echo "=+= Wrote results to ${OUTPUT_DIR}/${interface_dir}"

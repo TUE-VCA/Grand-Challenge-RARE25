@@ -11,7 +11,6 @@ WORKDIR /opt/app
 
 COPY --chown=user:user requirements.txt /opt/app/
 COPY --chown=user:user resources /opt/app/resources
-COPY --chown=user:user model /opt/app/model
 
 # You can add any Python dependencies to requirements.txt
 RUN python -m pip install \
